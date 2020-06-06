@@ -10,6 +10,7 @@ import { ProductService } from '../service/product.service';
 export class HomeComponent implements OnInit {
 
   products:Product[] = []
+  wiseProducts:Product[] = []
 
   constructor(private _productServive:ProductService) {}
 
@@ -35,6 +36,12 @@ export class HomeComponent implements OnInit {
         break;
       }
     }
-    console.log(event, name);
+    this.wiseProducts = []
+    for(let i in this.products){
+      if(this.products[i].category === name){
+        this.wiseProducts.push(this.products[i])
+      }
+    }
+    console.log(this.wiseProducts, name);
   }
 }
