@@ -14,11 +14,24 @@ export class CartItemsComponent implements OnInit {
   constructor(private _productMsg: ProductMessengerService) {}
 
   ngOnInit(): void {
-    this._productMsg.getMsg().subscribe((product: Product) => {
-      this.addProduct(product);
+    this._productMsg.getMsg().subscribe((data: any) => {
+      if(data.op === 'add')
+      this.addProduct(data.productItem);
+      if (data.op === 'remove') this.removeProduct(data.productItem);
     });
   }
 
+  removeProduct(product){
+    if(this.cartItems.length > 0){
+      for(let i in this.cartItems){
+        if(this.cartItems[i].id == product.id && this.cartItems[i].quantity>0){
+          this.cartItems[i].quantity--;
+          this.cartTotal -= this.cartItems[i].price 
+          break;
+        }
+      }
+    }
+  }
   addProduct(product) {
     let productExits = false;
 

@@ -14,8 +14,12 @@ export class ItemsComponent implements OnInit {
   ngOnInit(): void {
     // console.log(this.productItem)
   }
-
-  sendDate(){
-    this._productMsg.sendMsg(this.productItem)
+  data:object = {}
+  sendDate(op){
+    this.data = {
+      op : op,
+      productItem : this.productItem
+    }
+    this._productMsg.sendMsg(this.data)
   }
 }
