@@ -12,7 +12,7 @@ export class ItemsComponent implements OnInit {
   constructor(private _productMsg:ProductMessengerService) {}
 
   ngOnInit(): void {
-    console.log(this.productItem)
+    // console.log(this.productItem)
   }
 
   sendDate(){

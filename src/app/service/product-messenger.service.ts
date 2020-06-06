@@ -9,7 +9,7 @@ export class ProductMessengerService {
 subject = new Subject();
   constructor() { }
   sendMsg(product){
-    console.log(product)
+    // console.log(product)
     this.subject.next(product)
   }
   getMsg(){
