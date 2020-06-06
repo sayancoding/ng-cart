@@ -1,0 +1,15 @@
+<div class="card w-full bg-orange-100 my-4 p-2 rounded-md">
+  <div class="flex justify-between">
+    <p>{{productItem.name}}</p>
+    <p class="mr-2 hover:text-orange-700 cursor-pointer" (click)="sendDate()">
+      <i class="material-icons my-auto">add</i>
+    </p>
+  </div>
+  <div class="flex justify-between">
+    <p>{{productItem.price | currency:"INR"}}</p>
+    <p class="mr-2 hover:text-orange-700 cursor-pointer">
+      <i class="material-icons my-auto">remove</i>
+    </p>
+  </div>
+
+</div>

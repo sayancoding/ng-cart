@@ -1,0 +1,12 @@
+<p
+  class="bg-gray-100 rounded-sm inline-block px-2 py-4"
+  *ngIf="cartItems.length === 0"
+>
+  Your cart is empty..
+</p>
+<div *ngFor="let item of cartItems" class="flex justify-between pr-8 text-sm bg-orange-100 px-4 py-1 rounded-md">
+  <p>Chiken Tikka </p> <span>x</span> <p>2</p> : <p>440</p>
+</div>
+<div class="px-4 py-2 inline-block bg-orange-300 rounded mt-2 cursor-pointer">
+  <p>Proceed Total : <span>4400</span></p>
+</div>
