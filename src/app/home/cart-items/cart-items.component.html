@@ -6,7 +6,9 @@
 </p>
 <div *ngIf="cartItems.length > 0">
   <div *ngFor="let item of cartItems" class="flex justify-between inline-block pr-8 text-sm bg-orange-100 px-4 py-1 rounded-md">
-    <p>{{item.name}} </p> <span>x</span> <p>{{item.quantity}}</p> : <p>{{item.price}}</p>
+    <ng-container *ngIf="item.quantity != 0">
+      <p >{{item.name}} </p> <span>x</span> <p>{{item.quantity}}</p> : <p>{{item.price}}</p>
+    </ng-container>
   </div>
   <div class="px-4 py-2 inline-block bg-orange-400 rounded mt-2 cursor-pointer">
     <p>Proceed Total : <span>{{cartTotal}}</span></p>
