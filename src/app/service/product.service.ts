@@ -29,7 +29,7 @@ export class ProductService {
       imgUrl: '',
     },
     {
-      id: 10,
+      id: 12,
       category: 'roti',
       name: 'Roti with Chicken Kosa Combo ',
       price: 290,

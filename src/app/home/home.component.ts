@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
                 this.wiseProducts.push(this.products[i]);
               }
             }
-    console.log(this.products);
+    // console.log(this.products);
   }
 
   tabsValue: String[] = ['biryanis', 'chicken', 'veg', 'roti'];
