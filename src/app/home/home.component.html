@@ -1,24 +1,46 @@
-<div class="flex mt-6">
+<div class="flex sm:flex-row flex-col mt-6">
   <div class="w-3/12 max-h-full">
-    <ul class="text-right ">
-      <li class="py-3 border-r-2 pr-6 my-0 border-red-300 hover:text-orange-500 cursor-pointer" (click)="getTab($event,'biryanis')">Biryanis</li>
-      <li class="py-3 border-r-2 pr-6 my-0 border-red-300 hover:text-orange-500 cursor-pointer" (click)="getTab($event,'chicken')">Chicken</li>
-      <li class="py-3 border-r-2 pr-6 my-0 border-red-300 hover:text-orange-500 cursor-pointer" (click)="getTab($event,'veg')">Veg Special</li>
-      <li class="py-3 border-r-2 pr-6 my-0 border-red-300 hover:text-orange-500 cursor-pointer" (click)="getTab($event,'roti')">Roti/Paratha</li>
+    <ul class="flex sm:flex-col flex-row sm:text-right justify-start text-center sm:text-base text-sm">
+      <li
+        class="py-3 sm:border-r-2 pr-6 my-0 border-red-300 hover:text-orange-500 cursor-pointer"
+        (click)="getTab($event, 'biryanis')"
+      >
+        Biryanis
+      </li>
+      <li
+        class="py-3 sm:border-r-2 pr-6 my-0 border-red-300 hover:text-orange-500 cursor-pointer"
+        (click)="getTab($event, 'chicken')"
+      >
+        Chicken
+      </li>
+      <li
+        class="py-3 sm:border-r-2 pr-6 my-0 border-red-300 hover:text-orange-500 cursor-pointer"
+        (click)="getTab($event, 'veg')"
+      >
+        Veg Special
+      </li>
+      <li
+        class="py-3 sm:border-r-2 pr-6 my-0 border-red-300 hover:text-orange-500 cursor-pointer"
+        (click)="getTab($event, 'roti')"
+      >
+        Roti/Paratha
+      </li>
     </ul>
   </div>
-  <div class="w-6/12 p-8">
-  <div [id]="sectionId">
-    <p class="text-3xl">{{sectionTitle}}</p>
-    <div class="flex-col">
-      <div class="mx-2" *ngFor="let item of wiseProducts">
-        <app-items [productItem]="item"></app-items>
+  <div class="flex sm:w-9/12 w-full">
+    <div class="w-7/12 p-8">
+      <div [id]="sectionId">
+        <p class="text-3xl">{{ sectionTitle }}</p>
+        <div class="flex-col">
+          <div class="mx-2" *ngFor="let item of wiseProducts">
+            <app-items [productItem]="item"></app-items>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-  <div class="w-3/12 pt-8 pl-2">
-  <p class="text-xl mb-2">Cart</p>
-  <app-cart-items></app-cart-items>
+    <div class="w-4/12 pt-8 pl-2">
+      <p class="text-xl mb-2">Cart</p>
+      <app-cart-items></app-cart-items>
+    </div>
   </div>
 </div>

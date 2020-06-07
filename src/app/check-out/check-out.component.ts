@@ -17,4 +17,7 @@ export class CheckOutComponent implements OnInit {
     this.checkOutItems = this.data.data
      this.cartTotal =  JSON.parse(localStorage.getItem('total')).data
   }
+  proceed(){
+    alert(`Thank You for Your Interest..`)
+  }
 }
